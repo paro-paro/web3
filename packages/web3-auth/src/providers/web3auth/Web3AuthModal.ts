@@ -12,6 +12,7 @@ import type {
 
 class Web3AuthModal extends AuthProviderBase {
   authSdk?: Web3Auth
+  #provider: IProvider | null = null
   #config: Config
 
   constructor(config: Config) {
@@ -34,20 +35,21 @@ class Web3AuthModal extends AuthProviderBase {
     if (!this.authSdk)
       throw ERROR.notInitialized
 
-    if (this.authSdk && this.connected)
-      throw ERROR.userAlreadyConnected
+    // if (this.authSdk && this.connected)
+    //   throw ERROR.userAlreadyConnected
 
-    await this.authSdk.connect()
+    this.#provider = await this.authSdk.connect()
   }
 
   async signOut(): Promise<void> {
     if (!this.authSdk)
       throw ERROR.notInitialized
 
-    if (this.authSdk && !this.connected)
-      throw ERROR.userAlreadyDisconnected
+    // if (this.authSdk && !this.connected)
+    //   throw ERROR.userAlreadyDisconnected
 
     await this.authSdk.logout()
+    this.#provider = null
   }
 
   async getUserInfo(): Promise<Partial<UserInfo>> {
@@ -100,10 +102,7 @@ class Web3AuthModal extends AuthProviderBase {
    * @returns standard EIP-1193 provider
    */
   get provider(): IProvider | null {
-    if (!this.authSdk)
-      throw ERROR.notInitialized
-
-    return this.authSdk.provider
+    return this.#provider
   }
 
   get chainId(): string | undefined {

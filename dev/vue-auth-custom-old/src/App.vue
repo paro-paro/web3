@@ -4,7 +4,7 @@ import BaseComponent from './components/BaseComponent.vue'
 
 <template>
   <div>
-    <h1>AA (safe auth)</h1>
+    <h1>AA (custom auth old)</h1>
     <BaseComponent />
   </div>
 </template>

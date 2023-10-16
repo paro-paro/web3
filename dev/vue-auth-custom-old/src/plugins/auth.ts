@@ -11,8 +11,8 @@ export async function initAuth() {
       label: 'Torus',
       showOnModal: false,
     },
-    [WALLET_ADAPTERS.WALLET_CONNECT_V2]: {
-      label: 'WalletConnect v2',
+    [WALLET_ADAPTERS.WALLET_CONNECT_V1]: {
+      label: 'WalletConnect v1',
       showOnModal: false,
     },
     [WALLET_ADAPTERS.METAMASK]: {
@@ -99,7 +99,7 @@ export async function initAuth() {
         rpcTarget: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
       },
       uiConfig: {
-        theme: 'light',
+        theme: 'dark',
       },
     },
   }

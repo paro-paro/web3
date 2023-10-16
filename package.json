@@ -7,9 +7,10 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "pnpm build:aa && pnpm build:auth",
+    "build": "pnpm build:aa && pnpm build:auth && pnpm build:auth-old",
     "build:aa": "pnpm --filter web3-aa build",
-    "build:auth": "pnpm --filter web3-auth build"
+    "build:auth": "pnpm --filter web3-auth build",
+    "build:auth-old": "pnpm --filter web3-auth-old build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.18",

@@ -31,10 +31,6 @@ export async function initAuth() {
       label: 'walletconnect-v1',
       showOnModal: false,
     },
-    [WALLET_ADAPTERS.WALLET_CONNECT_V2]: {
-      label: 'walletconnect-v2',
-      showOnModal: false,
-    },
   }
 
   const openloginAdapter = new OpenloginAdapter({
