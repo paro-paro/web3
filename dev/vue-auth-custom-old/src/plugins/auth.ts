@@ -96,7 +96,7 @@ export async function initAuth() {
       chainConfig: {
         chainNamespace: CHAIN_NAMESPACES.EIP155,
         chainId: '0x5',
-        rpcTarget: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+        rpcTarget: 'https://goerli.infura.io/v3/f7f0e336b82345ef99a6710b0ba3a98d',
       },
       uiConfig: {
         theme: 'dark',
