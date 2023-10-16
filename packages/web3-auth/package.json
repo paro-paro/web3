@@ -1,0 +1,44 @@
+{
+  "name": "@paro-paro/web3-auth",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.8.0",
+  "description": "Authentication Service for web3 apps",
+  "author": "Antonio PG <aparodyg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/paro-paro/web3/tree/main/packages/web3-auth#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paro-paro/web3.git",
+    "directory": "packages/web3-auth"
+  },
+  "bugs": "https://github.com/paro-paro/web3/issues",
+  "keywords": ["authentication", "auth", "web3", "web3auth"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@web3auth/modal": "7.0.3"
+  },
+  "devDependencies": {
+    "@web3auth/base": "7.0.1",
+    "unbuild": "2.0.0"
+  }
+}

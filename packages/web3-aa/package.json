@@ -1,0 +1,47 @@
+{
+  "name": "@paro-paro/web3-aa",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.8.0",
+  "description": "Web3 Account Abstraction Integration",
+  "author": "Antonio PG <aparodyg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/paro-paro/web3/tree/main/packages/web3-aa#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paro-paro/web3.git",
+    "directory": "packages/web3-aa"
+  },
+  "bugs": "https://github.com/paro-paro/web3/issues",
+  "keywords": ["web3", "account abstraction", "safe", "ethereum"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@safe-global/api-kit": "1.3.1",
+    "@safe-global/protocol-kit": "1.3.0"
+  },
+  "devDependencies": {
+    "@safe-global/relay-kit": "1.3.0",
+    "@safe-global/safe-core-sdk-types": "2.3.0",
+    "ethers": "5.7.2",
+    "unbuild": "2.0.0"
+  }
+}

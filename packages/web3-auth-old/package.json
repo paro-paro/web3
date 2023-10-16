@@ -1,0 +1,33 @@
+{
+  "name": "@paro-paro/web3-auth-old",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.8.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@web3auth/modal": "4.6.2"
+  },
+  "devDependencies": {
+    "@web3auth/base": "4.6.0",
+    "unbuild": "2.0.0"
+  }
+}

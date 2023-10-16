@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-web3",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.8.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "pnpm build:aa && pnpm build:auth",
+    "build:aa": "pnpm --filter web3-aa build",
+    "build:auth": "pnpm --filter web3-auth build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.18",
+    "eslint": "8.50.0",
+    "typescript": "5.2.2"
+  }
+}
